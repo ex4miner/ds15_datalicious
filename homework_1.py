@@ -1,6 +1,6 @@
 class Hewan:
     nama_latin = "Animalia"
-    def __int__(self, nama, umur):
+    def __init__(self, nama, umur):
         self.nama = nama
         self.umur = umur
 
@@ -24,7 +24,7 @@ class Hewan:
 class Kucing(Hewan):
     nama_latin = 'Felis Catus'
 
-    def __int__(self, nama, umur):
+    def __init__(self, nama, umur):
         super().__init__(nama,umur)
 
     def bangun(self): #instance method
@@ -53,7 +53,7 @@ class Kucing(Hewan):
 class Kelinci(Hewan):
     nama_latin = 'Oryctolagus cuniculus'
 
-    def __int__(self, nama, umur):
+    def __init__(self, nama, umur):
         super().__init__(nama,umur)
 
     def bangun(self): #instance method
@@ -78,3 +78,9 @@ class Kelinci(Hewan):
             print("Cepat Sekali")
         else:
             print("Lamban")
+
+print(Hewan.nama_latin)
+animal_1 = Hewan(nama="Panda", umur=30)
+print(animal_1.nama, animal_1.umur)
+print(animal_1.bangun)
+print(animal_1.tidur(animal_1.nama,animal_1.umur))
